@@ -191,7 +191,8 @@
         </div>
       </div>
     </section>
-        <!-- CONTACT SECTION (Usklađen za Cloudflare i FormSubmit) -->
+      
+        <!-- CONTACT SECTION (Potpuno nezavisna HTML5 forma) -->
     <section class="contact-section" id="kontakt" aria-labelledby="contact-title">
       <div class="contact-container">
         <div class="contact-info-side">
@@ -207,22 +208,21 @@
         </div>
 
         <div class="contact-form-side">
-          <!-- Dodat direktan action za slanje i metod POST -->
-          <form class="lead-form" id="crafted-contact-form" action="https://formsubmit.co" method="POST">
+          <!-- Promenjen ID forme da ga stari script.js više nikada ne pronađe i ne blokira -->
+          <form class="lead-form" id="html-contact-form" action="https://formsubmit.co" method="POST">
             
-            <!-- Isključivanje dosadne reCAPTCHA verifikacije za klijente -->
             <input type="hidden" name="_captcha" value="false">
-            
-            <!-- Automatski povratak klijenta na vaš sajt nakon uspešnog slanja -->
             <input type="hidden" name="_next" value="https://craftedspace.rs">
 
             <div class="form-group">
+              <!-- HTML5 pattern dozvoljava samo slova i razmake -->
               <input type="text" id="name" name="Ime" required placeholder=" " pattern="^[A-Za-zА-Яа-яЁёШшЧчЋћĆćČčĐđŠšŽž\s]+$">
               <label for="name">Vaše ime *</label>
               <span class="input-line"></span>
             </div>
 
             <div class="form-group">
+              <!-- HTML5 pattern dozvoljava samo cifre, plus i crtice -->
               <input type="tel" id="phone" name="Telefon" required placeholder=" " pattern="^[0-9\s\+\-]+$">
               <label for="phone">Broj telefona *</label>
               <span class="input-line"></span>
@@ -240,12 +240,14 @@
               <span class="input-line"></span>
             </div>
 
+            <!-- Standardno HTML dugme bez ikakvih JS skripti -->
             <button type="submit" class="form-submit-btn">ZAKAŽITE KONSULTACIJU</button>
           </form>
         </div>
       </div>
     </section>
 
+    
     
 
   </main>
