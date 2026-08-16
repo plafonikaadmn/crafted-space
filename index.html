@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Crafted Space — dizajn prostora po meri vašeg života.">
+  <title>Crafted Space — Dizajn prostora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="#top" class="site-logo" aria-label="Crafted Space — početna">
+      <img src="assets/logo/crafted-space-logo-master-graphite.svg" alt="Crafted Space">
+    </a>
+
+    <nav class="main-nav" aria-label="Glavna navigacija">
+      <a href="#portfolio">Portfolio</a>
+      <a href="#filozofija">Filozofija Brenda</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <a class="header-cta" href="#kontakt">ZAKAŽITE KONSULTACIJU</a>
+  </header>
+
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <div class="hero-copy">
+          <div class="hero-eyebrow">CRAFTED SPACE · DIZAJN I REALIZACIJA</div>
+          <h1 id="hero-title">
+            Prostor po meri<br class="desktop-break"> vašeg života.
+          </h1>
+          <p class="hero-description">
+            Dizajniramo i gradimo po sistemu ključ u ruke — od prve ideje do prostora potpuno spremnog za život.
+          </p>
+          <a class="hero-cta" href="#kontakt">ZAKAŽITE KONSULTACIJU</a>
+        </div>
+
+        <div class="hero-image">
+          <img src="assets/images/hero/hero-interior.webp" alt="Savremeni minimalistički enterijer">
+          <div class="hero-image-placeholder-text">Ovde će biti vaša fotografija interijera</div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PORTFOLIO SECTION (Upgraded Dynamic Sliding Row Carousels) -->
+    <section class="projects-section" id="portfolio" aria-labelledby="portfolio-title">
+      <div class="projects-header">
+        <span class="projects-eyebrow">PORTFOLIO</span>
+        <h2 id="portfolio-title">Izabrani projekti</h2>
+        <p class="projects-subtitle">Pogledajte realizacije u kojima smo arhitektonsku viziju pretvorili u materijalnu stvarnost.</p>
+      </div>
+
+      <div class="projects-rows-container">
+        
+        <!-- Project 1: Photo Carousel Left, Text Right -->
+        <article class="project-row-card">
+          <div class="project-slider-wrapper">
+            <div class="project-row-slider" data-current-index="0">
+              <div class="project-slide-track">
+                <div class="project-row-image">
+                  <img src="assets/images/projects/project-1-1.webp" alt="Apartman Dorćol - Dnevni boravak">
+                  <div class="card-placeholder-text">Projekat 1 - Slika 1</div>
+                </div>
+                <div class="project-row-image">
+                  <img src="assets/images/projects/project-1-2.webp" alt="Apartman Dorćol - Kuhinja">
+                  <div class="card-placeholder-text">Projekat 1 - Slika 2</div>
+                </div>
+                <div class="project-row-image">
+                  <img src="assets/images/projects/project-1-3.webp" alt="Apartman Dorćol - Spavaća soba">
+                  <div class="card-placeholder-text">Projekat 1 - Slika 3</div>
+                </div>
+              </div>
+            </div>
+            <!-- Slider Navigation Controls -->
+            <button class="slider-btn prev-btn" aria-label="Prethodna slika">&#8249;</button>
+            <button class="slider-btn next-btn" aria-label="Sledeća slika">&#8250;</button>
+            <div class="slider-dots">
+              <span class="dot active" data-index="0"></span>
+              <span class="dot" data-index="1"></span>
+              <span class="dot" data-index="2"></span>
+            </div>
+          </div>
+          <div class="project-row-meta">
+            <h3 class="project-name">Apartman Dorćol</h3>
+            <p class="project-desc">Spoj toplih prirodnih tekstura i strogih minimalističkih linija stvorio je mirnu oazu u srcu grada. Svaki komad nameštaja je projektovan po meri kako bi se maksimizovala prostorna ergonomija.</p>
+          </div>
+        </article>
+        <!-- Project 2: Alternating -> Photo Carousel Right, Text Left -->
+        <article class="project-row-card project-row-reverse">
+          <div class="project-slider-wrapper">
+            <div class="project-row-slider" data-current-index="0">
+              <div class="project-slide-track">
+                <div class="project-row-image">
+                  <img src="assets/images/projects/project-2-1.webp" alt="Kuhinja N-02 - Glavni kadar">
+                  <div class="card-placeholder-text">Projekat 2 - Slika 1</div>
+                </div>
+                <div class="project-row-image">
+                  <img src="assets/images/projects/project-2-2.webp" alt="Kuhinja N-02 - Detalj kamenog ostrva">
+                  <div class="card-placeholder-text">Projekat 2 - Slika 2</div>
+                </div>
+                <div class="project-row-image">
+                  <img src="assets/images/projects/project-2-3.webp" alt="Kuhinja N-02 - Unutrašnji tehnički sistemi">
+                  <div class="card-placeholder-text">Projekat 2 - Slika 3</div>
+                </div>
+              </div>
+            </div>
+            <button class="slider-btn prev-btn" aria-label="Prethodna slika">&#8249;</button>
+            <button class="slider-btn next-btn" aria-label="Sledeća slika">&#8250;</button>
+            <div class="slider-dots">
+              <span class="dot active" data-index="0"></span>
+              <span class="dot" data-index="1"></span>
+              <span class="dot" data-index="2"></span>
+            </div>
+          </div>
+          <div class="project-row-meta">
+            <h3 class="project-name">Kuhinja N-02</h3>
+            <p class="project-desc">Monolitno kuhinjsko ostrvo od prirodnog kamena postalo je centralni element ovog otvorenog prostora. Skriveni tehnički sistemi obezbeđuju savršenu funkcionalnost bez narušavanja čiste estetike.</p>
+          </div>
+        </article>
+
+        <!-- Project 3: Photo Carousel Left, Text Right -->
+        <article class="project-row-card">
+          <div class="project-slider-wrapper">
+            <div class="project-row-slider" data-current-index="0">
+              <div class="project-slide-track">
+                <div class="project-row-image">
+                  <img src="assets/images/projects/project-3-1.webp" alt="Kancelarija Navigator - Otvoreni prostor">
+                  <div class="card-placeholder-text">Projekat 3 - Slika 1</div>
+                </div>
+                <div class="project-row-image">
+                  <img src="assets/images/projects/project-3-2.webp" alt="Kancelarija Navigator - Zona za sastanke">
+                  <div class="card-placeholder-text">Projekat 3 - Slika 2</div>
+                </div>
+                <div class="project-row-image">
+                  <img src="assets/images/projects/project-3-3.webp" alt="Kancelarija Navigator - Akustične kabine">
+                  <div class="card-placeholder-text">Projekat 3 - Slika 3</div>
+                </div>
+              </div>
+            </div>
+            <button class="slider-btn prev-btn" aria-label="Prethodna slika">&#8249;</button>
+            <button class="slider-btn next-btn" aria-label="Sledeća slika">&#8250;</button>
+            <div class="slider-dots">
+              <span class="dot active" data-index="0"></span>
+              <span class="dot" data-index="1"></span>
+              <span class="dot" data-index="2"></span>
+            </div>
+          </div>
+          <div class="project-row-meta">
+            <h3 class="project-name">Kancelarija Navigator</h3>
+            <p class="project-desc">Savremeni radni prostor fokusiran na akustični komfor i fleksibilnost zona. Integrisali smo napredne sisteme pametne rasvete koji se dinamički prilagođavaju ritmu tima tokom dana.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- BRAND PHILOSOPHY SECTION -->
+    <section class="approach-section" id="filozofija" aria-labelledby="principles-title">
+      <div class="approach-container">
+        <div class="approach-header">
+          <span class="approach-eyebrow">FILOZOFIJA BRENDA</span>
+          <h2 id="principles-title">Naš pristup radu</h2>
+        </div>
+
+        <div class="bento-grid">
+          <div class="bento-card">
+            <div class="card-graphic-indicator"></div>
+            <h3>Individualni dizajn</h3>
+            <p>Mi stvaramo prostor prema vašem načinu života, navikama i hobijima. Ne postoje identični ljudi, pa samim tim ne može biti ni identičnih dizajna. Svako rešenje je prilagođeno jedinstvenom ritmu i scenarijima vašeg života.</p>
+          </div>
+
+          <div class="bento-card">
+            <div class="card-graphic-indicator"></div>
+            <h3>Sinergija u radu: dizajneri i građevinci u istom timu</h3>
+            <p>Naši građevinci učestvuju u diskusiji o projektnim rešenjima od samog početka projekta. To je garancija da će inženjeri primeniti isključivo izvodljiva rešenja. Bez apstraktne grafike odvojene od realnosti — samo tačan inženjerski proračun.</p>
+          </div>
+
+          <div class="bento-card">
+            <div class="card-graphic-indicator"></div>
+            <h3>Ključ u ruke</h3>
+            <p>Radimo po sistemu „ključ u ruke“ — klijent uvek dobija prostor koji je potpuno spreman za život. Preuzimamo sve procese — od konceptualnog skica i nabavke materijala do kontrole izgradnje i finalnog čišćenja.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="kontakt" aria-labelledby="contact-title">
+      <div class="contact-container">
+        <div class="contact-info-side">
+          <span class="contact-eyebrow">KONTAKT</span>
+          <h2 id="contact-title">Zakažite besplatnu konsultaciju</h2>
+          <p class="contact-subtitle">
+            Imate viziju prostora koji želite da transformišete? Popunite formular — kontaktiraćemo vas u najkraćem roku kako bismo analizirali vaše potrebe i predložili prve korake.
+          </p>
+          <div class="contact-direct-info">
+            <p><strong>Lokacija:</strong> Beograd, Srbija</p>
+            <p><strong>Radno vreme:</strong> Pon - Pet: 09:00 - 18:00</p>
+          </div>
+        </div>
+
+        <div class="contact-form-side">
+          <form class="lead-form" id="crafted-contact-form">
+            <div class="form-group">
+              <input type="text" id="name" name="Ime" required placeholder=" " pattern="^[A-Za-zА-Яа-яЁёШшЧчЋћĆćČčĐđŠšŽž\s]+$">
+              <label for="name">Vaše ime *</label>
+              <span class="input-line"></span>
+            </div>
+
+            <div class="form-group">
+              <input type="tel" id="phone" name="Telefon" required placeholder=" " pattern="^[0-9\s\+\-]+$">
+              <label for="phone">Broj telefona *</label>
+              <span class="input-line"></span>
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="email" name="Email" placeholder=" ">
+              <label for="email">E-mail adresa</label>
+              <span class="input-line"></span>
+            </div>
+
+            <div class="form-group">
+              <textarea id="message" name="Poruka" rows="4" placeholder=" "></textarea>
+              <label for="message">Opišite ukratko vaš prostor (kvadratura, želje...)</label>
+              <span class="input-line"></span>
+            </div>
+
+            <button type="submit" class="form-submit-btn">ZAKAŽITE KONSULTACIJU</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-main">
+
+      <div class="footer-brand">
+        <a href="#top" class="footer-logo" aria-label="Crafted Space — početna">
+          <img src="assets/logo/crafted-space-logo-master-dark.svg" alt="Crafted Space">
+        </a>
+
+        <p class="footer-tagline">
+          Dizajniran prema vašem načinu života,<br>
+          osmišljen za stvaran život i realizovan<br>
+          do poslednjeg detalja.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>NAVIGACIJA</h3>
+        <a href="#top">Početna</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#filozofija">Filozofija Brenda</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>KONTAKTIRAJTE NAS</h3>
+        <a href="tel:+381000000000">+381 00 000 00 00</a>
+        <a href="mailto:hello@craftedspace.rs">hello@craftedspace.rs</a>
+
+        <a href="#" class="messenger-link" aria-label="WhatsApp">
+          <span class="social-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 1 1 20.5 11.7Z"/>
+            </svg>
+          </span>
+          WhatsApp
+        </a>
+
+        <a href="#" class="messenger-link" aria-label="Viber">
+          <span class="social-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </span>
+          Viber
+        </a>
+      </div>
+
+      <div class="footer-column">
+        <h3>DRUŠTVENE MREŽE</h3>
+
+        <a href="#" class="social-link" aria-label="Instagram">
+          <span class="social-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </span>
+          Instagram
+        </a>
+
+        <a href="#" class="social-link" aria-label="Facebook">
+          <span class="social-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </span>
+          Facebook
+        </a>
+
+        <a href="#" class="social-link" aria-label="YouTube">
+          <span class="social-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+            </svg>
+          </span>
+          YouTube
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-legal">
+      <div class="legal-title">POSLOVNI PODACI</div>
+
+      <div class="legal-company">
+        [Naziv pravnog lica]<br>
+        [Adresa]
+      </div>
+
+      <div class="legal-numbers">
+        PIB: XXXXXXXX<br>
+        MB: XXXXXXXX
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Crafted Space. Sva prava zadržana.</span>
+      <span>DIZAJN PROSTORA</span>
+      <a href="#top">NAZAD NA VRH ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
