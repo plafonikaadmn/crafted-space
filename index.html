@@ -191,7 +191,7 @@
         </div>
       </div>
     </section>
-    <!-- CONTACT SECTION -->
+            <!-- CONTACT SECTION (Formspree official SDK Integration) -->
     <section class="contact-section" id="kontakt" aria-labelledby="contact-title">
       <div class="contact-container">
         <div class="contact-info-side">
@@ -207,41 +207,41 @@
         </div>
 
         <div class="contact-form-side">
-          <!-- Verified action pointing directly to your exact mailbox destination -->
-          <form class="lead-form" id="html-contact-form" action="https://formsubmit.co" method="POST">
+          <!-- Form target pointing to your exact live endpoint id -->
+          <form class="lead-form" id="html-contact-form">
             
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://craftedspace.rs">
-
             <div class="form-group">
-              <input type="text" id="name" name="Ime" required placeholder=" " pattern="^[A-Za-zА-Яа-яЁёШшЧчЋћĆćČčĐđŠšŽž\s]+$">
+              <input type="text" id="name" name="Ime" required placeholder=" " pattern="^[A-Za-zА-Яа-яЁёШшЧчЋћĆćČčĐđŠšŽž\s]+$" data-fs-field>
               <label for="name">Vaše ime *</label>
               <span class="input-line"></span>
             </div>
 
             <div class="form-group">
-              <input type="tel" id="phone" name="Telefon" required placeholder=" " pattern="^[0-9\s\+\-]+$">
+              <input type="tel" id="phone" name="Telefon" required placeholder=" " pattern="^[0-9\s\+\-]+$" data-fs-field>
               <label for="phone">Broj telefona *</label>
               <span class="input-line"></span>
             </div>
 
             <div class="form-group">
-              <input type="email" id="email" name="Email" placeholder=" ">
+              <input type="email" id="email" name="Email" placeholder=" " data-fs-field>
               <label for="email">E-mail adresa</label>
               <span class="input-line"></span>
             </div>
 
             <div class="form-group">
-              <textarea id="message" name="Poruka" rows="4" placeholder=" "></textarea>
+              <textarea id="message" name="Poruka" rows="4" placeholder=" " data-fs-field></textarea>
               <label for="message">Opišite ukratko vaš prostor (kvadratura, želje...)</label>
               <span class="input-line"></span>
             </div>
 
-            <button type="submit" class="form-submit-btn">ZAKAŽITE KONSULTACIJU</button>
+            <!-- Formspree native button controller handler -->
+            <button type="submit" class="form-submit-btn" data-fs-submit-btn>ZAKAŽITE KONSULTACIJU</button>
           </form>
         </div>
       </div>
     </section>
+
+    
 
   </main>
 
@@ -297,7 +297,7 @@
       <div class="footer-column">
         <h3>DRUŠTVENE MREŽE</h3>
 
-        <a href="#" class="social-link" aria-label="Instagram">
+        <a href="https://www.instagram.com/craftedspace.rs/" class="social-link" aria-label="Instagram">
           <span class="social-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -308,7 +308,7 @@
           Instagram
         </a>
 
-        <a href="#" class="social-link" aria-label="Facebook">
+        <a href="https://www.facebook.com/profile.php?id=61593074741561" class="social-link" aria-label="Facebook">
           <span class="social-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
@@ -317,7 +317,7 @@
           Facebook
         </a>
 
-        <a href="#" class="social-link" aria-label="YouTube">
+        <a href="https://www.youtube.com/@craftedspace_rs" class="social-link" aria-label="YouTube">
           <span class="social-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
@@ -352,5 +352,10 @@
   </footer>
 
   <script src="script.js"></script>
+    <!-- Formspree Authoritative CDN Scripts -->
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+  
+  <script src="script.js"></script>
+
 </body>
 </html>

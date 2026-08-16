@@ -1,5 +1,9 @@
-// CRAFTED SPACE - Portfolio Slider Core Engine
+// CRAFTED SPACE - Production Slider Core & Formspree SDK Controller
 document.addEventListener('DOMContentLoaded', () => {
+  
+  // ==========================================
+  // 1. PORTFOLIO SLIDERS ENGINE
+  // ==========================================
   const cards = document.querySelectorAll('.project-row-card');
 
   cards.forEach(card => {
@@ -60,4 +64,35 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }, { passive: true });
   });
+
+  // ==========================================
+  // 2. FORMSPREE NATIVE SDK INITIALIZATION
+  // ==========================================
+  const formElement = document.querySelector('#html-contact-form');
+
+  if (formElement) {
+    // Inject success interceptor handlers directly into Formspree framework pipeline
+    window.formspree = window.formspree || function () { 
+      (formspree.q = formspree.q || []).push(arguments); 
+    };
+
+    // Instantiate and bind your specific form schema to the endpoint tracker
+    formspree('initForm', { 
+      formElement: '#html-contact-form', 
+      formId: 'mjybeddr',
+      onSuccess: function() {
+        const nameVal = document.getElementById('name').value || 'Klijent';
+        alert(`Hvala Vam, ${nameVal}! Uspešno ste poslali zahtev. Kontaktiraćemo vas u najkraćem roku.`);
+        formElement.reset(); // Wipe all fields clean upon verified transmission
+      }
+    });
+
+    // Handle button visual states while processing live validation
+    formElement.addEventListener('submit', () => {
+      const submitBtn = formElement.querySelector('[data-fs-submit-btn]');
+      if (submitBtn) {
+        submitBtn.textContent = 'SLANJE UPITA...';
+      }
+    });
+  }
 });
