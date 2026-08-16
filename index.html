@@ -191,14 +191,14 @@
         </div>
       </div>
     </section>
-    <!-- CONTACT SECTION -->
+        <!-- CONTACT SECTION (Usklađen za Cloudflare i FormSubmit) -->
     <section class="contact-section" id="kontakt" aria-labelledby="contact-title">
       <div class="contact-container">
         <div class="contact-info-side">
           <span class="contact-eyebrow">KONTAKT</span>
           <h2 id="contact-title">Zakažite besplatnu konsultaciju</h2>
           <p class="contact-subtitle">
-            Imate viziju prostora koji želite da transformišete? Popunite formular — kontaktiraćemo vas u najkraćem roku kako bismo analizirali vaše potrebe i predložiti prve korake.
+            Imate viziju prostora koji želite da transformišete? Popunite formular — kontaktiraćemo vas u najkraćem roku kako bismo analizirali vaše potrebe i predložili prve korake.
           </p>
           <div class="contact-direct-info">
             <p><strong>Lokacija:</strong> Beograd, Srbija</p>
@@ -207,7 +207,15 @@
         </div>
 
         <div class="contact-form-side">
-          <form class="lead-form" id="crafted-contact-form">
+          <!-- Dodat direktan action za slanje i metod POST -->
+          <form class="lead-form" id="crafted-contact-form" action="https://formsubmit.co" method="POST">
+            
+            <!-- Isključivanje dosadne reCAPTCHA verifikacije za klijente -->
+            <input type="hidden" name="_captcha" value="false">
+            
+            <!-- Automatski povratak klijenta na vaš sajt nakon uspešnog slanja -->
+            <input type="hidden" name="_next" value="https://craftedspace.rs">
+
             <div class="form-group">
               <input type="text" id="name" name="Ime" required placeholder=" " pattern="^[A-Za-zА-Яа-яЁёШшЧчЋћĆćČčĐđŠšŽž\s]+$">
               <label for="name">Vaše ime *</label>
@@ -237,6 +245,8 @@
         </div>
       </div>
     </section>
+
+    
 
   </main>
 
