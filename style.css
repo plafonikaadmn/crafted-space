@@ -215,6 +215,208 @@ a {
 .hero-image img:not([src=""]) + .hero-image-placeholder-text {
   display: none;
 }
+/* =========================
+   PRODUCT & PRICING BENTO GRID SECTION
+   ========================= */
+
+.pricing-section {
+  padding: 120px 4.2vw;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  width: 100%;
+}
+
+.pricing-container {
+  max-width: none;
+  margin: 0;
+  width: 100%;
+}
+
+.pricing-header {
+  margin-bottom: 60px;
+  width: 100%;
+  text-align: left;
+}
+
+.pricing-eyebrow {
+  display: block;
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  color: var(--text);
+  margin: 0 0 16px 0;
+  text-align: left;
+}
+
+.pricing-header h2 {
+  font-size: clamp(42px, 4vw, 60px);
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  text-align: left;
+  margin: 0 0 20px -7px; /* Optička kompenzacija slova N */
+}
+
+.pricing-subtitle {
+  font-size: 17px;
+  line-height: 1.55;
+  color: #55534f;
+  margin: 0;
+  text-align: left;
+}
+
+/* Bento Grid: 3 columns for regular cards, auto row sizing */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+.pricing-card {
+  background: #fdfdfc; /* Clean ivory-white card face background */
+  border: 1px solid var(--line);
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  text-align: left;
+}
+
+.card-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #55534f;
+  margin: 0 0 32px 0;
+}
+
+.pricing-card h3 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.22;
+  margin: 0 0 20px 0;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.card-price {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: auto; /* Pushes the price cleanly to the bottom of the card */
+  letter-spacing: -0.01em;
+}
+
+/* Flagship Card Rule: Spans all 3 columns across desktop layouts */
+.flagship-card {
+  grid-column: 1 / -1;
+  background: #f1f0ec; /* Slightly deeper tone to highlight the primary contracting service */
+}
+
+.flagship-content-split {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+}
+
+.flagship-left {
+  flex: 1.6;
+}
+
+.flagship-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+  border-left: 1px solid var(--line);
+  padding-left: 60px;
+}
+
+.flagship-price-box {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.price-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #7c7a75;
+  margin-bottom: 4px;
+}
+
+.price-value {
+  font-size: 72px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  color: var(--text);
+}
+
+.price-sub {
+  font-size: 14px;
+  color: #55534f;
+  margin-top: 4px;
+}
+
+.pricing-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 30px;
+  background: var(--text);
+  border: 1px solid var(--text);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  border-radius: 4px;
+  transition: background 0.3s ease, color 0.3s ease;
+  width: 100%;
+}
+
+.pricing-cta-btn:hover {
+  background: transparent;
+  color: var(--text);
+}
+
+/* Responsive Grid Adapters for Tablets & Mobile Screens */
+@media (max-width: 1100px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .flagship-content-split {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .flagship-right {
+    border-left: none;
+    padding-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .pricing-section {
+    padding: 60px 20px;
+  }
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .pricing-card {
+    padding: 36px 28px;
+  }
+  .price-value {
+    font-size: 56px;
+  }
+}
 
 
 /* =========================
